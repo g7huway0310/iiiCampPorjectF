@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+	<session-factory>
+		<!--
+		<property name="hibernate.connection.driver_class">oracle.jdbc.driver.OracleDriver</property>
+		<property name="hibernate.connection.password">hr</property>
+		<property name="hibernate.connection.url">jdbc:oracle:thin:@localhost:1521/XEPDB1</property>
+		<property name="hibernate.connection.username">hr</property>
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
+        -->
+
+		<property name="hibernate.dialect">org.hibernate.dialect.Oracle12cDialect</property>
+
+		<property name="hibernate.connection.datasource">java:comp/env/connectOracleJdbc/HibernateService</property>
+
+
+		<property name="hibernate.current_session_context_class">thread</property>
+
+
+		<property name="hibernate.show_sql">true</property>
+		
+		<property name="hibernate.format_sql">true</property>
+		
+		<mapping resource="tw/huway0310/model/HouseBean.hbm.xml" />
+	
+		<mapping class="tw.huway0310.model.Department" />
+
+		<mapping class="tw.huway0310.model.Student" />
+
+		<mapping class="tw.huway0310.model.Laptop" />
+		
+		<mapping class="com.gocamp.shop.bean.Product"/>
+		
+		<mapping class="tw.huway0310.model.Books" />
+
+		<mapping class="tw.huway0310.model.BooksDetail" />
+
+		<mapping class="tw.huway0310.model.Stock" />
+
+		<mapping class="tw.huway0310.model.StockTransaction" />
+
+		<mapping class="tw.huway0310.model.Profiles" />
+
+
+	</session-factory>
+</hibernate-configuration>
