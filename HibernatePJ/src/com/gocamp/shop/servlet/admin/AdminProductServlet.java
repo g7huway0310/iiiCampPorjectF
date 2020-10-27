@@ -142,6 +142,7 @@ public class AdminProductServlet extends HttpServlet {
 //		PrintWriter writer = response.getWriter();
 //
 //		writer.print(aJsonObject);
+//Ajax
 
 		System.out.println(dataList);
 
