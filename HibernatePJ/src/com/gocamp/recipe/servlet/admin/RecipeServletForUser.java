@@ -80,7 +80,7 @@ private void processRecipeAction(HttpServletRequest request, HttpServletResponse
 			Recipe recipe = new Recipe(rename,brief,image,ingredient,tip1,tip2,tip3,tip4,tip5,tip6,note,people,time,price,discount,stock);
             RecipeService service = new RecipeService(session);
             service.insert(recipe);
-			request.getRequestDispatcher("./AdminLTE-3.0.5/AddRecipeSuccess.jsp").forward(request,response);	
+			request.getRequestDispatcher("./AdminLTE-3.0.5/admin.recipe.suecess.jsp").forward(request,response);	
 	
 }
 
@@ -107,7 +107,7 @@ private void processRecipeAction(HttpServletRequest request, HttpServletResponse
 			RecipeService service = new RecipeService(session);
 			Recipe recipe = service.update(reid, rename, brief, image, ingredient, tip1, tip2, tip3, tip4, tip5, tip6, note, people, time);
 			try {
-				request.getRequestDispatcher("./AdminLTE-3.0.5/UpdateRecipeSuccess.jsp").forward(request,response);
+				request.getRequestDispatcher("./AdminLTE-3.0.5/admin.recipe.suecess.jsp").forward(request,response);
 			} catch (ServletException | IOException e) {
 				e.printStackTrace();
 			}
@@ -123,7 +123,7 @@ private void processRecipeAction(HttpServletRequest request, HttpServletResponse
 			RecipeService service = new RecipeService(session);
 			List<Recipe> recipe = service.select(reid);
 			request.setAttribute("recipe", recipe);	
-			request.getRequestDispatcher("./AdminLTE-3.0.5/UpdateRecipe.jsp").forward(request,response);				
+			request.getRequestDispatcher("./AdminLTE-3.0.5/admin.recipe.update.jsp").forward(request,response);				
 			
 }
 
@@ -134,7 +134,7 @@ private void processRecipeAction(HttpServletRequest request, HttpServletResponse
 			int reid = Integer.valueOf(request.getParameter("reid"));
 			RecipeService service = new RecipeService(session);
 			if(service.delete(reid)) {
-				RequestDispatcher rd = request.getRequestDispatcher("./AdminLTE-3.0.5/DeleteRecipeSuccess.jsp");
+				RequestDispatcher rd = request.getRequestDispatcher("./AdminLTE-3.0.5/admin.recipe.delete.jsp");
 			    rd.forward(request, response);
 				
 		};
@@ -153,7 +153,7 @@ private void processRecipeAction(HttpServletRequest request, HttpServletResponse
 			List<Recipe> recipe = service.selectByName(rename);
 			
 			request.setAttribute("recipe", recipe);	
-			request.getRequestDispatcher("./recipe/Recipe.jsp").forward(request,response);
+			request.getRequestDispatcher("./AdminLTE-3.0.5/admin.recipe.jsp").forward(request,response);
 	               
 	
 }
@@ -167,7 +167,7 @@ private void processRecipeAction(HttpServletRequest request, HttpServletResponse
 		RecipeService service = new RecipeService(session);
 		List<Recipe> recipe = service.selectAll();
 		request.setAttribute("recipe", recipe);		
-		request.getRequestDispatcher("./AdminLTE-3.0.5/RecipeAdmin.jsp").forward(request,response);
+		request.getRequestDispatcher("./AdminLTE-3.0.5/admin.recipe.jsp").forward(request,response);
 		
 		}
 		
