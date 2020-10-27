@@ -8,7 +8,7 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="Campinf")
+@Table(name="CAMPINF")
 public class CampgroundBean {
 	public CampgroundBean(){
 	}

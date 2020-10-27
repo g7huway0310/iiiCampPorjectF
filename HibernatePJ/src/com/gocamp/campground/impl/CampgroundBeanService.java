@@ -48,5 +48,10 @@ public class CampgroundBeanService implements ICampgroundBeanService {
 		return cDao.delete(Id);
 	}
 
+	public List<CampgroundBean> selectByCity(String city) {
+		// TODO Auto-generated method stub
+		return cDao.selectByCity(city);
+	}
+
 
 }

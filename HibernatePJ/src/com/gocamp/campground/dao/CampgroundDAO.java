@@ -18,6 +18,7 @@ public class CampgroundDAO {
 	public  CampgroundBean insert(CampgroundBean bean) {
 			CampgroundBean result = session.get(CampgroundBean.class,bean.getId());
 			if(result==null){
+				System.out.println("bean= "+bean.getId());
 				session.save(bean);
 				return bean;
 			}	
@@ -29,7 +30,7 @@ public class CampgroundDAO {
 	}
 	
 	public List<CampgroundBean> selectByCity(String city){
-		List result= session.createQuery("from CampgroundBean where city like city").list();
+		List result= session.createQuery("from CampgroundBean where city like'"+ city+"'").list();
 		
 		for (int i = 0; i<result.size() ; i++) {
 			CampgroundBean campinf = (CampgroundBean) result.get(i);
@@ -55,6 +56,17 @@ public class CampgroundDAO {
 		Query<CampgroundBean> query = session.createQuery("From CampgroundBean",CampgroundBean.class);
 		List<CampgroundBean> list = query.list();
 		return list;
+	}
+	
+	public List<CampgroundBean> selectById(int id){
+		Query<CampgroundBean>query= session.createQuery("from CampgroundBean where id="+id,CampgroundBean.class);
+		List<CampgroundBean>listid=query.list();
+		for (int i = 0; i<listid.size() ; i++) {
+			if(listid.get(i).getId()!=id) {
+				return null;
+			}
+		}
+		return listid;
 	}
 	
 	  public boolean delete(int Id) {
