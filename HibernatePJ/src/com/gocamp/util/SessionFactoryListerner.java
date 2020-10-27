@@ -8,7 +8,7 @@ public class SessionFactoryListerner implements ServletContextListener {
 	@Override
 	public void contextDestroyed(ServletContextEvent sce) {
 		// TODO Auto-generated method stub
-		HibernateUtil.closeSessionFactory();
+		HibernateUtil.getSessionFactory();
 		System.out.println("SessionFactory Closed");
 	}
 

@@ -19,31 +19,27 @@
 
 
 		<property name="hibernate.show_sql">true</property>
-		
+
 		<property name="hibernate.format_sql">true</property>
+
+
 		
-		<mapping resource="tw/huway0310/model/HouseBean.hbm.xml" />
+
+		<mapping class="com.gocamp.member.model.Member" />
 	
-		<mapping class="tw.huway0310.model.Department" />
+	    <mapping class="com.gocamp.shop.bean.Product" />
 
-		<mapping class="tw.huway0310.model.Student" />
-
-		<mapping class="tw.huway0310.model.Laptop" />
+		<mapping class="com.gocamp.recipe.model.Recipe" />
 		
-		<mapping class="com.gocamp.shop.bean.Product"/>
+		<mapping class="com.gocamp.forum.bean.Post"/>
 		
-		<mapping class="tw.huway0310.model.Books" />
-
-		<mapping class="tw.huway0310.model.BooksDetail" />
-
-		<mapping class="tw.huway0310.model.Stock" />
-
-		<mapping class="tw.huway0310.model.StockTransaction" />
-
-		<mapping class="tw.huway0310.model.Profiles" />
+    	<mapping class="com.gocamp.forum.bean.Reply"/>
 		
-		<mapping class="com.gocamp.recipe.model.Recipe"/>
+	    <mapping class="com.gocamp.campground.bean.CampgroundBean"/>
+
+    
 		
+	     
 
 
 	</session-factory>

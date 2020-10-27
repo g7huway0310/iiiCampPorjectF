@@ -24,7 +24,7 @@ import com.gocamp.shop.bean.Product;
 import com.gocamp.shop.dao.ProductDAO;
 import com.gocamp.util.HibernateUtil;
 
-import tw.huway0310.model.HouseBean;
+
 
 public class ProductDAOImp implements ProductDAO {
 

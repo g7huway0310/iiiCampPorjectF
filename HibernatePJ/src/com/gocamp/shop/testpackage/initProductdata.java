@@ -23,9 +23,6 @@ import com.gocamp.shop.bean.Product;
 import com.gocamp.shop.dao.impl.ProductDAOImp;
 import com.gocamp.util.HibernateUtil;
 
-import tw.huway0310.model.HouseBean;
-import tw.huway0310.model.HouseBeanDAO;
-
 /**
  * Servlet implementation class DemoHibernateAction
  */
