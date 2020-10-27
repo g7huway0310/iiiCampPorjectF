@@ -42,7 +42,7 @@ public class PostSelectAllAction extends HttpServlet {
 		PostBeanDAO pDAO = new PostBeanDAO(session);
 		List<Post> list = pDAO.selectAll();
 		request.setAttribute("beanList", list);
-		RequestDispatcher rd = request.getRequestDispatcher("/AdminLTE-3.0.5/CRUD Table.jsp"); // ���w��������� Demo.jsp
+		RequestDispatcher rd = request.getRequestDispatcher("/AdminLTE-3.0.5/admin.blog.postall.jsp"); // ���w��������� Demo.jsp
 		rd.forward(request, response);
 	}
 

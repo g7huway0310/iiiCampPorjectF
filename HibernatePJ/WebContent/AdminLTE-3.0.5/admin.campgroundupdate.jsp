@@ -21,7 +21,7 @@
 
 </head>
 <body>
-<jsp:include page="TopwithLeftNav.jsp" />
+<jsp:include page="BasicLeftTop.html" />
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
     <section class="content-header">

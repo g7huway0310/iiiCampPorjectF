@@ -47,7 +47,7 @@ public class ActionSelectAllMember extends HttpServlet {
 
 
 		
-		RequestDispatcher rd = request.getRequestDispatcher("/AdminLTE-3.0.5/CRUD Table.jsp"); 
+		RequestDispatcher rd = request.getRequestDispatcher("AdminLTE-3.0.5/CRUD Table.jsp"); 
 		rd.forward(request, response);
 
 	}

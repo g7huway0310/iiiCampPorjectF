@@ -67,7 +67,7 @@ function confirmselect(c) {
 </script>
 </head>
 
-<jsp:include page="TopwithLeftNav.jsp" />
+<jsp:include page="BasicLeftTop.html" />
 <body class="hold-transition sidebar-mini" onload="setFocus()">
     <form action=".\DemoCampgroundServlet" method="post">
     <!-- Main content -->
