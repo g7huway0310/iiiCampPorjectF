@@ -48,7 +48,7 @@ request.setAttribute("path", basePath);
 </style>
 </head>
 
-<jsp:include page="TopwithLeftNav.jsp" />
+<jsp:include page="BasicLeftTop.html" />
 
 <body class="hold-transition sidebar-mini">
 	<!-- Main content -->
