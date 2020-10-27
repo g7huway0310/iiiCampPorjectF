@@ -44,10 +44,8 @@ public class ActionSelectAllMember extends HttpServlet {
 		MemberDAO mDAO = new MemberDAO(session);
 		List<Member> list = mDAO.selectAll();
 		request.setAttribute("beanList", list);
-
-
 		
-		RequestDispatcher rd = request.getRequestDispatcher("AdminLTE-3.0.5/CRUD Table.jsp"); 
+		RequestDispatcher rd = request.getRequestDispatcher("AdminLTE-3.0.5/admin.member.listok.jsp"); 
 		rd.forward(request, response);
 
 	}
